@@ -11,15 +11,18 @@
 .inputbox #filter {
   font-weight: bold;
   position: absolute;
-  top: 50%;
+  top: -40%;
   left: 44%;
   -webkit-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
 }
 
-.inputbox input:focus + #filter{
-  top: 10%
+.inputbox input:focus + #filter {
+  top: 10%;
+}
 
+.inputbox input:blur + #filter {
+	top: -40%;
 }
   
 .inputbox input {
