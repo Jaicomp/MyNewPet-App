@@ -1,0 +1,1 @@
+create table if not exists "User" (id integer, uid integer, accountEnabled boolean);
