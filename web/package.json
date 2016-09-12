@@ -1,0 +1,27 @@
+{
+  "name": "mynewpet",
+  "version": "1.0.0",
+  "description": "Page for adopt a new pet",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaicomp/MyNewPet-App.git"
+  },
+  "keywords": [
+    "MyNewPet",
+    "web"
+  ],
+  "author": "Jaicomp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jaicomp/MyNewPet-App/issues"
+  },
+  "homepage": "https://github.com/Jaicomp/MyNewPet-App#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
