@@ -4,16 +4,16 @@ var settings = require('./settings');
 
 var app = express();
 
+//Public assets
 app.use('/public', express.static(__dirname + '/public'));
 
-app.use(function(err, req, res, next){
-	if (err){
-		res.status(404).send('Sorry cant find that!');
-	}
-});
+//View engine
+app.set('views', './views');
+app.set('view engine', 'pug');
+
 
 app.get('/', function(req, res) {
-	console.log(settings.WEBPORT);
+	res.render('index');
 });
 
 app.all(function(req, res){
