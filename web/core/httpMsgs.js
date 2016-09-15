@@ -5,9 +5,9 @@ exports.renderFile = function(res, filename) {
 	res.render(filename);
 };
 
-exports.send500 = function (req, res) {
+exports.send500Error = function (res) {
 
-	
+	res.render('500Error');	
 
 };
 
