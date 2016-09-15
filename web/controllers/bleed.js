@@ -1,18 +1,14 @@
 var db = require('../core/db');
 var httpMsgs = require('../core/httpMsgs');
 
-
-console.log(db);
 exports.getList = function(req, res, filename) {
 
-	db.executeSQL ('SELECT * FROM "TypeAnimal"', function (err, data){
+	db.executeSQL ('SELECT * FROM "Bleed"', function (err, data){
 		if (err){
 			console.log("ERROR");
 			//TODO Send error 500
 		}
-		httpMsgs.renderFile(res, filename);		
-
+		console.log(data);
 	});
-
 
 };

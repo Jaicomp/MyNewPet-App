@@ -4,6 +4,8 @@ var pgp = require('pg-promise')();
 var settings = require('./settings');
 var db = require('./core/db');
 var typeAnimal = require('./controllers/typeanimal');
+var bleed = require('./controllers/bleed');
+
 
 var app = express();
 
@@ -20,6 +22,12 @@ app.get('/', function(req, res) {
 	
 	typeAnimal.getList(req, res, 'index');
 });
+
+app.get('/bleed', function(req, res){
+	//TODO Add filename (last parameter)
+	bleed.getList(req, res, typeAnimal);
+});
+
 
 app.listen(settings.WEBPORT,  function() {
 	console.log("Connected to port: " + settings.WEBPORT);
