@@ -1,8 +1,6 @@
 var db = require('../core/db');
 var httpMsgs = require('../core/httpMsgs');
 
-
-console.log(db);
 exports.getList = function(req, res, filename) {
 
 	db.executeSQL ('SELECT * FROM "TypeAnimal"', function (err, data){
