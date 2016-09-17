@@ -19,7 +19,6 @@ app.set('view engine', 'pug');
 
 
 app.get('/', function(req, res) {
-	
 	typeAnimal.getList(req, res, 'index');
 });
 

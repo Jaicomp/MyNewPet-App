@@ -1,8 +1,15 @@
 doctype html
 html
 	head
-		title Header
+		title MyNewPet
 		link(href='public/css/header.css', rel='stylesheet')
+
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+
+		link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+		script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+
 	body
 		.login
 			#loginTitle Login
@@ -14,7 +21,7 @@ html
 			hr.loginLine
 			input#loginEmail(type='text', placeholder='Correo electrónico')
 			br
-			input(type='checkbox'.loginCheckbox
+			input(type='checkbox').loginCheckbox
 			label Recuerdáme
 			br
 			input#loginPassword(type='password', placeholder='Contraseña')
