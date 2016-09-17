@@ -1,5 +1,25 @@
+#navbar {
+	border: 0;
+	padding: 0;
+	width: 100%;
+	height: auto;
+	padding: 10px;
+	background-color: grey;
+	float: left;
+	font-size: 20px;
+	font-weight: bold;
+}
 
-.login {
+#navbar #logo {
+	float: left;
+}
+
+#navbar #loginAccess {
+	float: right;
+}
+
+#login {
+	display: none;
   position: absolute;
   top: 30%;
   left: 30%;
@@ -12,28 +32,28 @@
   font-family: "Helvetica";
 }
 
-#loginTitle {
+#login #loginTitle {
   padding: 10px;
   font-size: 30px;
   font-weight: bold;
   font-family: "Helvetica";
 }
 
-.loginLine {
+#login .loginLine {
   margin: 0 auto;
   width: 80%;
   color: rgb(226,266,266);
 }
 
-#loginSocial {
+#login #loginSocial {
   margin-top: 20px;
 }
 
-.loginBtn {
+#login #loginSocial .loginBtn {
   border-right: 1px solid rgb(226,226,226);
   box-sizing: border-box;
   position: relative;
-  margin: 0.2em;
+  margin: 0.5em;
   padding: 0 15px 0 46px;
   border: none;
   text-align: left;
@@ -45,7 +65,7 @@
   width: 80%;
 }
 
-.loginBtn:before {
+#login #loginSocial .loginBtn:before {
   content: "";
   box-sizing: border-box;
   position: absolute;
@@ -55,58 +75,60 @@
   height: 100%;
 }
 
-.loginBtn:focus {
+#login #loginSocial .loginBtn:focus {
   outline: none;
 }
 
-.loginBtn:active{
+#login #loginSocial .loginBtn:active{
     box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
 }
 
-.loginBtn:last-child {
+#login #loginSocial .loginBtn:last-child {
   margin-top: 20px;
 }
 
-.loginBtn--facebook {
+#login #loginSocial .loginBtn--facebook {
   background-color: #4C69BA;
   background-image: linear-gradient(#4C69BA, #3B55A0);
   text-shadow: 0 -1px 0 #354C8C;
 }
 
-.loginBtn--facebook:before {
+#login #loginSocial .loginBtn--facebook:before {
   border-right: #364e92 1px solid;
   background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
 }
 
-.loginBtn--facebook:hover,
-.loginBtn--facebook:focus {
+#login #loginSocial .loginBtn--facebook:hover,
+#login #loginSocial .loginBtn--facebook:focus {
   background-color: #5B7BD5;
   background-image: linear-gradient(#5B7BD5, #4864B1);
 }
 
-.loginBtn--google {
+#login #loginSocial .loginBtn--google {
   background: #DD4B39;
 }
-.loginBtn--google:before {
+
+#login #loginSocial .loginBtn--google:before {
   border-right: #BB3F30 1px solid;
   background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
 }
-.loginBtn--google:hover,
-.loginBtn--google:focus {
+
+#login #loginSocial .loginBtn--google:hover,
+#login #loginSocial .loginBtn--google:focus {
   background: #E74B37;
 }
 
-input#loginEmail {
+#login input#loginEmail {
   margin-top: 20px;
   width: 78%;
 }
 
-input.loginCheckbox {
+#login input.loginCheckbox {
   text-align: left !important;
   margin-left: -57%;
 }
 
-input#loginPassword {
+#login input#loginPassword {
   margin-top: 20px;
   width: 78%;
 }

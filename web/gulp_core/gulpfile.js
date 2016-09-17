@@ -11,6 +11,7 @@ gulp.task('default', ['sass'],function(){
 	gulp.watch('../public/html/*.html', ['html']);
 	gulp.watch('../public/css/*.css', ['css']);
 	gulp.watch('../public/js/*.js', ['js']);
+	gulp.watch('../views/*.pug', ['pug']);
 
 });
 
@@ -30,7 +31,12 @@ gulp.task('css', function() {
 		.pipe(livereload());
 });
 
-gulp.task('js', function(){
+gulp.task('js', function() {
 	gulp.src('../public/js/*.js')
+		.pipe(livereload());
+});
+
+gulp.task('pug', function() {
+	gulp.src('../views/*.pug')
 		.pipe(livereload());
 });
