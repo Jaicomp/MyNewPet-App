@@ -1,0 +1,26 @@
+{
+  "name": "other",
+  "version": "1.0.0",
+  "description": "Others things related with MyNewPet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaicomp/MyNewPet-App.git"
+  },
+  "keywords": [
+    "Pet"
+  ],
+  "author": "Jaicomp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jaicomp/MyNewPet-App/issues"
+  },
+  "homepage": "https://github.com/Jaicomp/MyNewPet-App#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "request": "^2.75.0"
+  }
+}
