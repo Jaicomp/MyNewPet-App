@@ -11,11 +11,11 @@ html
 		script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
 		
 		link(href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css')
-
+		script(src='public/js/header.js')
 	body
 		div#navbar
 			#logo MyNewPet
-			a#loginAccess Login
+			a#loginAccess(onclick='showLogin(this)') Acceder
 		#login
 			#loginTitle Login
 			hr.loginLine
