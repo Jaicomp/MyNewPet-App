@@ -9,11 +9,13 @@ html
 		link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
 		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
 		script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+		
+		link(href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css')
 
 	body
 		div#navbar
-			#logo okiaasd
-			button#loginAccess Login
+			#logo MyNewPet
+			a#loginAccess Login
 		#login
 			#loginTitle Login
 			hr.loginLine
@@ -28,4 +30,4 @@ html
 			label Recuerdáme
 			br
 			input#loginPassword(type='password', placeholder='Contraseña')
-			- 
+			- function oki(obj) { obj.display = "block"; } 

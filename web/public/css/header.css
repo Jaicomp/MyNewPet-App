@@ -2,20 +2,38 @@
 	border: 0;
 	padding: 0;
 	width: 100%;
-	height: auto;
+	height: 70px;
 	padding: 10px;
-	background-color: grey;
 	float: left;
-	font-size: 20px;
-	font-weight: bold;
+	background-color: #F2CF66;
+
 }
 
 #navbar #logo {
 	float: left;
+	font-size: 30px;
+	font-weight: bold;
 }
 
 #navbar #loginAccess {
+	text-decoration: none;
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+	padding: 10px 40px;
+	border-radius: 10px;
+	font-family: 'Pacifico', cursive;
+	font-size: 16px;
+	color: #FFF;
+	background-color: #3498DB;
+	border-bottom: 5px solid #2980B9;
+	text-shadow: 0px -2px #2980B9;
 	float: right;
+}
+
+#navbar #loginAccess:active {
+	transform: translate(0px, 5px);
+	-webkit-transform: translate(0px, 5px);
+	border-bottom: 1px solid;
 }
 
 #login {
