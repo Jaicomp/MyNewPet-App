@@ -17,17 +17,21 @@ html
 			#logo MyNewPet
 			a#loginAccess(onclick='showLogin(this)') Acceder
 		#login
-			#loginTitle Login
-			hr.loginLine
-			#loginSocial
-				button.loginBtn.loginBtn--facebook Login with Facebook
+			#loginContent
+				#loginTitle Login
+				hr.loginLine
+				#loginSocial
+					button.loginBtn.loginBtn--facebook Acceder con Facebook
+					br
+					button.loginBtn.loginBtn--google Acceder con google
+				hr.loginLine
+				input#loginEmail(type='text', placeholder='Correo electrónico')
 				br
-				button.loginBtn.loginBtn--google Login with google
-			hr.loginLine
-			input#loginEmail(type='text', placeholder='Correo electrónico')
-			br
-			input(type='checkbox').loginCheckbox
-			label Recuerdáme
-			br
-			input#loginPassword(type='password', placeholder='Contraseña')
-			- function oki(obj) { obj.display = "block"; } 
+				br
+				input(type='checkbox').loginCheckbox
+				label Recuerdáme
+				br
+				input#loginPassword(type='password', placeholder='Contraseña')
+				br
+				br
+				input#loginSubmitEmail(type='submit', value='Iniciar sesión')
