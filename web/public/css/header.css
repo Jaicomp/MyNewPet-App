@@ -42,21 +42,25 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
+	z-index: 1;
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
 #loginContent {
-  position: absolute;
-  top: 30%;
-  left: 30%;
-  width: 500px;
+  top: 0;
+  left: 0;
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
   height: 400px;
-  margin: 0 auto;
   border-radius: 4px;
   border: 1px solid grey;
+	margin-top: 10%;
   text-align: center;
   font-family: "Helvetica";
 	background-color: white;
+	transition: all 2s ease;
 }
 
 #loginContent #loginTitle {
@@ -180,3 +184,6 @@
 	padding: 6px;
 }
 
+#loginContent #loginRegister {
+	padding: 5px;
+}

@@ -11,14 +11,14 @@ html
 		script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
 		
 		link(href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css')
-		script(src='public/js/header.js')
+		script(src='public/js/header.js', defer='defer')
 	body
 		div#navbar
 			#logo MyNewPet
 			a#loginAccess(onclick='showLogin(this)') Acceder
 		#login
 			#loginContent
-				#loginTitle Login
+				#loginTitle Acceder
 				hr.loginLine
 				#loginSocial
 					button.loginBtn.loginBtn--facebook Acceder con Facebook
@@ -35,3 +35,4 @@ html
 				br
 				br
 				input#loginSubmitEmail(type='submit', value='Iniciar sesión')
+				a#loginRegister Registrase
