@@ -16,7 +16,7 @@ request('http://miperroesunico.com/content/razas-de-perros', function(error, res
 				if (dogInfo.children('img').attr('src') !== 'string') {
 					if ((typeof  dogInfo.attr('alt')) == 'string'){
 						
-						dog.image = dogInfo.attr('src'); 
+						dog.image = dogInfo.attr('src').slice(dogInfo.attr('src').lastIndexOf('/') + 1); 
 						dog.name = dogInfo.attr('alt').slice(0, dogInfo.attr('alt').indexOf(' -'));
 						dogs[index] = dog;
 						index++;
