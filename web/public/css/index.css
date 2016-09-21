@@ -1,0 +1,138 @@
+#cardsContainer {
+	margin: 0 auto;
+	width: 96%;
+	height: auto;
+	background-color: #737980;
+}
+
+#cardsContainer .card {
+	width: 31%;
+	height: 200px;
+	border: 1px solid grey;
+	float: left;
+	margin: 2% 2% 2% 0;
+	text-decoration: none;
+	position: relative;
+}
+
+#cardsContainer .card img {
+	width: 100%;
+	height: 70%;
+	transition: height 0.2s;
+	-webkit-transition: height 0.2s;
+}
+
+#cardsContainer .card .nameTypeAnimal {
+	text-align: center;
+	margin-top: 10%;
+	font-size: 20px;
+
+}
+
+#cardsContainer .card .animalBook, #cardsContainer .card .animalSelection {
+	display: none;
+}
+
+#cardsContainer .card:hover {
+	cursor: pointer;
+}
+
+#cardsContainer .card:hover img {
+	width: 100%;
+	height: 30%;
+}
+
+#cardsContainer .card:hover .nameTypeAnimal {
+	font-size: 30px;
+}
+
+#cardsContainer .card:hover .animalSelection {
+	position: absolute;
+	bottom: 30%;
+	left: 25%;
+	display: block;
+	text-align: center;
+	width: 50%;
+	border: 2px solid rgb(52, 152, 219);
+	border-radius: 10px;
+	font-size: 30px;
+	color: rgb(52, 152, 219);
+
+}
+
+#cardsContainer .card:hover .animalBook {
+	position: absolute;
+	bottom: 10%;
+	left: 25%;
+	display: block;
+	text-align: center;
+	width: 50%;
+	border: 2px solid orange;
+	border-radius: 10px;
+	font-size: 30px;
+	color: orange;
+}
+
+#cardsContainer .card:hover .animalBook:hover {
+	background-color: orange;
+	color: white;
+}
+
+#cardsContainer .card:hover .animalSelection:hover {
+	background-color: rgb(52, 152, 219);
+	color: white;
+
+}
+@media screen and (min-width: 1000px) {
+	
+#cardsContainer .card .nameTypeAnimal {
+	text-align: center;
+	margin-top: 5%;
+	font-size: 20px;
+
+	}
+
+}
+@media screen and (min-width: 1600px) {
+
+	#cardsContainer .card .nameTypeAnimal {
+		margin-top: 3%;
+	}
+
+}
+@media screen and (max-width: 1000px) {
+	#cardsContainer .card {
+		width: 48%;	
+		height: 300px;
+	}
+
+	
+	#cardsContainer .card img {
+		height: 60%;
+	}
+
+	#cardsContainer .card .nameTypeAnimal {
+		margin-top: 5%;
+		font-size: 20px;
+	}
+	#cardsContainer .card .animalBook {
+	position: absolute;
+	bottom: 10%;
+	left: 25%;
+	display: block;
+	text-align: center;
+	width: 50%;
+	border: 2px solid orange;
+	border-radius: 10px;
+	font-size: 20px;
+	color: orange;
+display: block;
+		
+
+	}
+}
+
+
+
+
+
