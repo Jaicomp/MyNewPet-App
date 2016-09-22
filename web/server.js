@@ -19,7 +19,7 @@ app.set('view engine', 'pug');
 
 
 app.get('/', function(req, res) {
-	typeAnimal.getList(req, res, 'index');
+	typeAnimal.getList(res, 'index');
 });
 
 app.get('/bleed', function(req, res){
