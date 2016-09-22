@@ -46,7 +46,7 @@
 }
 
 #cardsContainer .card:hover img {
-	max-width: 130%;
+	width: 100%;
 }
 
 
@@ -118,12 +118,34 @@
 
 	
 	#cardsContainer .card img {
-		height: 70%;
+		height: 50%;
 	}
 
 	#cardsContainer .card .dataCard .nameTypeAnimal {
 		margin-top: 5%;
 		font-size: 20px;
+	}
+	#cardsContainer .card .dataCard .animalSelection {
+		display: block;
+		text-align: center;
+		width: 50%;
+		margin: 10px auto;
+		border: 2px solid rgb(52, 152, 219);
+		border-radius: 10px;
+		font-size: 20px;
+		color: rgb(52, 152, 219);
+		
+	}
+
+	#cardsContainer .card .dataCard .animalBook {
+		display: block;
+		text-align: center;
+		width: 50%;
+		margin: 0 auto;
+		border: 2px solid orange;
+		border-radius: 10px;
+		font-size: 20px;
+		color: orange;
 	}
 }
 
