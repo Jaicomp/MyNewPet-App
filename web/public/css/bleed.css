@@ -1,0 +1,133 @@
+#cardsContainer {
+	margin: 0 auto;
+	width: 96%;
+	height: auto;
+	background-color: #737980;
+}
+
+#cardsContainer .card {
+	width: 31%;
+	height: 250px;
+	border: 1px solid grey;
+	float: left;
+	margin: 2% 2% 2% 0;
+	text-decoration: none;
+}
+
+#cardsContainer .card img {
+	width: 100%;
+	height: 70%;
+}
+
+#cardsContainer .card .dataCard {
+	transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	background-color: white;
+}
+
+#cardsContainer .card .dataCard .bleedAnimal {
+	text-align: center;
+	margin-top: 10%;
+	font-size: 20px;
+
+}
+
+#cardsContainer .card .dataCard .animalBook , #cardsContainer .card .dataCard .animalSelection {
+	display: none;
+}
+
+#cardsContainer .card .dataCard .animalBook {
+	display: none;
+}
+
+#cardsContainer .card:hover {
+	cursor: pointer;
+
+}
+
+#cardsContainer .card:hover img {
+	max-width: 130%;
+}
+
+
+#cardsContainer .card:hover .dataCard {
+	-ms-transform: translate(0px, -100px);
+	-webkit-transform: translate(0px, -70px);
+	transform: translate(0px, -70px);
+}
+
+#cardsContainer .card:hover .dataCard .bleedAnimal {
+	font-size: 30px;
+}
+
+#cardsContainer .card:hover .dataCard .animalSelection {
+	display: block;
+	text-align: center;
+	width: 50%;
+	margin: 10px auto;
+	border: 2px solid rgb(52, 152, 219);
+	border-radius: 10px;
+	font-size: 20px;
+	color: rgb(52, 152, 219);
+
+}
+
+#cardsContainer .card:hover .dataCard .animalBook {
+	display: block;
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+	border: 2px solid orange;
+	border-radius: 10px;
+	font-size: 20px;
+	color: orange;
+}
+
+#cardsContainer .card:hover .dataCard .animalBook:hover {
+	background-color: orange;
+	color: white;
+}
+
+#cardsContainer .card:hover .dataCard .animalSelection:hover {
+	background-color: rgb(52, 152, 219);
+	color: white;
+
+}
+@media screen and (min-width: 1000px) {
+	
+#cardsContainer .card .dataCard .bleedAnimal {
+	text-align: center;
+	margin-top: 5%;
+	font-size: 20px;
+
+	}
+
+}
+@media screen and (min-width: 1600px) {
+
+	#cardsContainer .card .dataCard .bleedAnimal {
+		margin-top: 3%;
+	}
+
+}
+@media screen and (max-width: 1000px) {
+	#cardsContainer .card {
+		width: 48%;	
+		height: 300px;
+	}
+
+	
+	#cardsContainer .card img {
+		height: 70%;
+	}
+
+	#cardsContainer .card .dataCard .bleedAnimal {
+		margin-top: 5%;
+		font-size: 20px;
+	}
+}
+
+
+
+
+
