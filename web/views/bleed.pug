@@ -1,9 +1,11 @@
 include header.pug
 link(href='public/css/bleed.css', rel='stylesheet')
 #cardsContainer
-	a.card(href='#')
+	- for (var i in data) {
+	a.card(href=''+data[i].name)
 		img(src='http://lorempixel.com/400/200/', width=100, height=100)
 		.dataCard
-			.bleedAnimal Perro
+			.bleedAnimal #{ data[i].name }
 			.animalSelection Seleccionar
 			.animalBook Reservar
+	- }

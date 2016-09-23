@@ -23,8 +23,13 @@ exports.getList = function(req, res, typeAnimal, filename) {
 						httpMsgs.send500Error(res);
 					}
 					console.log(data);			
-
-					httpMsgs.renderFile(res, filename);
+					var dataContainer = {};
+					dataContainer.data = {};
+					for (var i in data) {
+						dataContainer.data["data"+i] = {name: data[i].name, needPermission: data[i].needpermission, urlimage: data[i].urlimage};
+					}
+					console.log(dataContainer);
+					httpMsgs.renderFile(res, filename, dataContainer);
 
 				});
 			}

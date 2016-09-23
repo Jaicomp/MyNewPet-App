@@ -2,11 +2,7 @@
 var settings = require('../settings');
 
 exports.renderFile = function(res, filename, data) {
-	res.render(filename, data);
-};
-
-exports.renderFile = function(res, filename) {
-	res.render(filename);
+		res.render(filename, data);
 };
 
 exports.send500Error = function (res) {

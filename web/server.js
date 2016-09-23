@@ -23,7 +23,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/bleed', function(req, res){
-	bleed.getList(req, res, req.query.typeanimal, 'bleed');
+		bleed.getList(req, res, req.query.typeanimal, 'bleed');
 });
 
 

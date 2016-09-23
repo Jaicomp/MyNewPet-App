@@ -14,7 +14,6 @@ exports.getList = function(res, filename) {
 		for (var i in data) {
 			dataContainer.data["data"+i] = {name: data[i].name, urlimage: data[i].urlimage};
 		}
-
 		httpMsgs.renderFile(res, filename, dataContainer);		
 
 	});
