@@ -2,7 +2,7 @@
   height: 50px;
   width: 400px;
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -10,9 +10,10 @@
 
 .inputbox #filter {
   font-weight: bold;
+	font-size: 25px;
   position: absolute;
-  top: -40%;
-  left: 44%;
+  top: -65%;
+  left: 42%;
   -webkit-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
 }

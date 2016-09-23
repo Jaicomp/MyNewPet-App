@@ -1,6 +1,11 @@
 include header.pug
 link(href='public/css/index.css', rel='stylesheet')
+link(href='public/css/filter.css', rel='stylesheet')
 
+form.inputbox
+	input(type='text', required)
+	#filter Filtro
+	button.del(type='reset')
 
 #cardsContainer
 	- for (var i in data) {
