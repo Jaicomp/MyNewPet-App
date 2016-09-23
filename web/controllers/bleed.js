@@ -16,14 +16,13 @@ exports.getList = function(req, res, typeAnimal, filename) {
 			if (data[i].name == typeAnimal) {
 				typeAnimalFounded = true;
 
-				db.executeSQL ('SELECT "name" FROM "Bleed"', function (err, data){
+				db.executeSQL ('SELECT "Bleed"."name", "Bleed"."urlimage", "Bleed"."needpermission" FROM "Bleed" INNER JOIN "TypeAnimal" ON ("TypeAnimal".id="Bleed".idtypeanimal AND "TypeAnimal"."name" = \''+typeAnimal+'\')', function (err, data){
 
 					if (err) {
 						console.log("ERROR: " + err);
 						httpMsgs.send500Error(res);
 					}
-					console.log(data);
-					
+					console.log(data);			
 
 					httpMsgs.renderFile(res, filename);
 
