@@ -5,11 +5,19 @@ exports.renderFile = function(res, filename, data) {
 	res.render(filename, data);
 };
 
-exports.send500Error = function (res) {
+exports.renderFile = function(res, filename) {
+	res.render(filename);
+};
 
+exports.send500Error = function (res) {
+	res.status(500);
 	res.render('500Error');	
 
 };
 
 
+exports.send404Error = function (res) {
+	res.status(404);
+	res.render('404Error');
+};
 

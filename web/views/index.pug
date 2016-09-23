@@ -4,7 +4,7 @@ link(href='public/css/index.css', rel='stylesheet')
 
 #cardsContainer
 	- for (var i in data) {
-	a.card(href='bleed?name='+data[i].name)
+	a.card(href='bleed?typeanimal='+data[i].name)
 		img(src='http://lorempixel.com/400/200/', width=100, height=100)
 		.dataCard
 			.typeAnimal #{data[i].name}

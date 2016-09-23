@@ -23,8 +23,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/bleed', function(req, res){
-	//TODO Add filename (last parameter)
-	bleed.getList(req, res, 'dog', 'bleed');
+	bleed.getList(req, res, req.query.typeanimal, 'bleed');
 });
 
 
