@@ -1,7 +1,7 @@
 include header.pug
 link(href='public/css/index.css', rel='stylesheet')
 link(href='public/css/filter.css', rel='stylesheet')
-
+script(src='public/js/index.js', defer)
 form.inputbox
 	input(type='text', required)
 	#filter Filtro
@@ -14,3 +14,4 @@ form.inputbox
 		.dataCard
 			.typeAnimal #{data[i].name}
 	- }
+
