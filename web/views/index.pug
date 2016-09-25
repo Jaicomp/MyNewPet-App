@@ -2,8 +2,8 @@ include header.pug
 link(href='public/css/index.css', rel='stylesheet')
 link(href='public/css/filter.css', rel='stylesheet')
 script(src='public/js/index.js', defer)
-form.inputbox
-	input(type='text', required)
+form.inputbox(onsubmit="return false;")
+	input(type='text', required, onchange='getText(this)')
 	#filter Filtro
 	button.del(type='reset')
 
