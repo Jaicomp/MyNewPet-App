@@ -15,7 +15,7 @@ html
 	body
 		div#navbar
 			#logo MyNewPet
-			a#loginAccess(onclick='showLogin(this)') Acceder
+			a.mainButton#loginAccess(onclick='showLogin(this)') Acceder
 		#login
 			#loginContent
 				#loginTitle Acceder
@@ -25,14 +25,25 @@ html
 					br
 					button.loginBtn.loginBtn--google Acceder con google
 				hr.loginLine
-				input#loginEmail(type='text', placeholder='Correo electrónico')
+				input.loginInputText(type='text', placeholder='Correo electrónico')
 				br
 				br
 				input(type='checkbox').loginCheckbox
 				label Recuerdáme
 				br
-				input#loginPassword(type='password', placeholder='Contraseña')
+				input.loginInputText(type='password', placeholder='Contraseña')
 				br
 				br
 				input#loginSubmitEmail(type='submit', value='Iniciar sesión')
-				a#loginRegister Registrase
+				a#loginRegister(onclick='signUpContent()') Registrase
+
+			#signUpSection
+				h1 Introduce tu dirección de correo electrónico:
+				input(type='text', placeholder='Corre electrónico').loginInputText
+				br
+				br
+				br
+				br
+				br
+				a.mainButton Registrarse
+
