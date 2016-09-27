@@ -38,12 +38,12 @@ html
 				a#loginRegister(onclick='signUpContent()') Registrase
 
 			#signUpSection
-				h1 Introduce tu dirección de correo electrónico:
-				input(type='text', placeholder='Correo electrónico').loginInputText#emailRegister
+				h1#emailRegisterTitle Introduce tu dirección de correo electrónico:
+				input.loginInputText#emailRegisterInput(type='text', placeholder='Correo electrónico')
 				br
 				br
 				br
 				br
 				br
-				a.mainButton(onclick='sendEmailSignUp()') Registrarse
+				a.mainButton#registerButtonSignUp(onclick='sendEmailSignUp()') Registrarse
 
