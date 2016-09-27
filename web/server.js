@@ -26,6 +26,12 @@ app.get('/bleed', function(req, res){
 		bleed.getList(req, res, req.query.typeanimal, 'bleed');
 });
 
+app.get('/sendemail', function(req, res) {
+	
+	res.send("OKIO");
+
+});
+
 
 app.listen(settings.WEBPORT,  function() {
 	console.log("Connected to port: " + settings.WEBPORT);
