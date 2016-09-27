@@ -4,6 +4,15 @@ function showLogin(login) {
 	document.getElementById('loginContent').style.display = "block";
 	document.getElementById('signUpSection').style.display = "none";
 
+	var email = document.getElementById('emailRegisterInput');
+	var title = document.getElementById('emailRegisterTitle');
+	var registerButton = document.getElementById('registerButtonSignUp');
+
+	title.innerHTML = 'Introduce tu dirección de correo electrónico:';
+	email.setAttribute('placeholder', 'Corro electrónico');
+	email.value = '';
+	registerButton.setAttribute('onclick', 'sendEmailSignUp()');
+
 }
 
 function signUpContent() {
