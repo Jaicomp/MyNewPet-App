@@ -33,7 +33,7 @@ app.get('/sendemail', function(req, res) {
 
 		var codeSignUp = createCodeOf12Characters();
 
-		//email.sendEmailSignUp(req.query.email, codeSignUp);
+		email.sendEmailSignUp(req.query.email, codeSignUp);
 		user.newUser(res, req.query.email, codeSignUp);
 
 		res.send(req.query.email);
