@@ -4,11 +4,12 @@ var helper = require('sendgrid').mail;
 
 var settings = require('./settings');
 var db = require('./core/db');
+var email = require('./core/email');
 var typeAnimal = require('./controllers/typeanimal');
 var bleed = require('./controllers/bleed');
+var user = require('./controllers/user');
 
 var app = express();
-var helper = require('sendgrid').mail;
 
 //Public assets
 app.use('/public', express.static(__dirname + '/public'));
@@ -28,50 +29,13 @@ app.get('/bleed', function(req, res){
 
 app.get('/sendemail', function(req, res) {
 
-	if ((req.query.email.length> 0) && /[a-zA-Z0-9!@]*@[a-zA-Z0-9!@]*/.test(req.query.email)) {
+	if ((req.query.email.length> 3) && /[a-zA-Z0-9!@]*@[a-zA-Z0-9!@]*/.test(req.query.email)) {
 
-		var charactersCodeSignUp = [];
-		var codeSignUp = '';
-		for (var i = 48; i < 58; i++) {
-			charactersCodeSignUp.push(String.fromCharCode(i));
-		}
+		var codeSignUp = createCodeOf12Characters();
 
-		for (var i = 65; i < 91; i++) {
-			charactersCodeSignUp.push(String.fromCharCode(i));
-		}
-	
-		for (var i = 97; i < 123; i++) {
-			charactersCodeSignUp.push(String.fromCharCode(i));
-		}
+		//email.sendEmailSignUp(req.query.email, codeSignUp);
+		user.newUser(res, req.query.email, codeSignUp);
 
-		for(var i = 0; i < 12; i++) {
-			codeSignUp += charactersCodeSignUp[Math.floor(Math.random()*charactersCodeSignUp.length)];
-			
-		}
-		console.log(codeSignUp);
-		var from_email = new helper.Email('NuevaCuenta@MyNewPet.es');
-		var to_email = new helper.Email(req.query.email);
-		var subject = 'Bienvenido a MyNewPet!!';
-		var content = new helper.Content('text/plain', 'Bienvenido a MyNewPet!!\nBienvenido a tu nueva cuenta. Registrarte es muy fácil, solo tienes que introducir el siguiente código: ' + codeSignUp);
-		var mail = new helper.Mail(from_email, subject, to_email, content);
-		
-		var sg = require('sendgrid')('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');
-
-		var request = sg.emptyRequest({
-  		method: 'POST',
-  		path: '/v3/mail/send',
-  		body: mail.toJSON(),
-		});
-
-		sg.API(request, function(error, response) {
-			if (error) {
-				console.log (error);
-			}
-  		console.log(response.statusCode);
-  		console.log(response.body);
-  		console.log(response.headers);
-		});
-		
 		res.send(req.query.email);
 	} else {
 		res.send('FAIL');
@@ -82,3 +46,31 @@ app.get('/sendemail', function(req, res) {
 app.listen(settings.WEBPORT,  function() {
 	console.log("Connected to port: " + settings.WEBPORT);
 });
+
+
+function createCodeOf12Characters() {
+		var charactersCode = [];
+		var code = '';
+		for (var i = 48; i < 58; i++) {
+			charactersCode.push(String.fromCharCode(i));
+		}
+
+		for (var i = 65; i < 91; i++) {
+			charactersCode.push(String.fromCharCode(i));
+		}
+	
+		for (var i = 97; i < 123; i++) {
+			charactersCode.push(String.fromCharCode(i));
+		}
+
+		for(var i = 0; i < 12; i++) {
+			code += charactersCode[Math.floor(Math.random()*charactersCode.length)];
+		}
+
+		return code;
+}
+
+
+
+
+
