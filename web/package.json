@@ -27,6 +27,7 @@
     "gulp-livereload": "^3.8.1",
     "gulp-sass": "^2.3.2",
     "pug": "^2.0.0-beta6",
-    "sendgrid": "^4.3.0"
+    "sendgrid": "^4.3.0",
+    "validator": "^6.0.0"
   }
 }

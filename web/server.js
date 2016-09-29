@@ -1,6 +1,7 @@
 var express = require('express');
 var pgp = require('pg-promise')();
 var helper = require('sendgrid').mail;
+var validator = require('validator');
 
 var settings = require('./settings');
 var db = require('./core/db');
@@ -28,8 +29,7 @@ app.get('/bleed', function(req, res){
 });
 
 app.get('/sendemail', function(req, res) {
-
-	if ((req.query.email.length> 3) && /[a-zA-Z0-9!@]*@[a-zA-Z0-9!@]*/.test(req.query.email)) {
+	if ((req.query.email.length> 5) && validator.isEmail(req.query.email)) {
 
 		var codeSignUp = createCodeOf12Characters();
 
