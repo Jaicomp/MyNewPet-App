@@ -1,6 +1,6 @@
 #cardsContainer {
 	margin: 0 auto;
-	width: 96%;
+	width: 90%;
 	height: auto;
 	background-color: #737980;
 }
@@ -13,6 +13,11 @@
 	margin: 2% 2% 2% 0;
 	text-decoration: none;
 }
+
+#cardsContainer .card:first-of-type {
+	margin-left: 3%;
+}
+	
 
 #cardsContainer .card img {
 	width: 100%;
@@ -28,7 +33,7 @@
 #cardsContainer .card .dataCard .bleedAnimal {
 	text-align: center;
 	margin-top: 10%;
-	font-size: 20px;
+	font-size: 30px;
 
 }
 
@@ -93,29 +98,29 @@
 	color: white;
 
 }
-@media screen and (min-width: 1000px) {
-	
-#cardsContainer .card .dataCard .bleedAnimal {
-	text-align: center;
-	margin-top: 5%;
-	font-size: 20px;
 
+@media screen and (max-width: 400px) {
+
+	#cardsContainer .card:first-of-type {
+		margin-left: 1%;
 	}
-
-}
-@media screen and (min-width: 1600px) {
 
 	#cardsContainer .card .dataCard .bleedAnimal {
-		margin-top: 3%;
+		margin-top: 10%;
+		font-size: 30px;
+		text-align: center;
 	}
-
 }
+
 @media screen and (max-width: 1000px) {
 	#cardsContainer .card {
 		width: 48%;	
 		height: 300px;
 	}
 
+	#cardsContainer .card:first-of-type {
+		margin-left: 0.01%;
+	}
 	
 	#cardsContainer .card img {
 		height: 70%;
@@ -123,11 +128,32 @@
 
 	#cardsContainer .card .dataCard .bleedAnimal {
 		margin-top: 5%;
+		font-size: 30px;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	
+	#cardsContainer .card:first-of-type {
+		margin-left: 0;
+	}
+
+	#cardsContainer .card .dataCard .bleedAnimal {
+		text-align: center;
+		margin-top: 5%;
 		font-size: 20px;
 	}
 }
 
+@media screen and (min-width: 1600px) {
 
+	#cardsContainer .card .dataCard .bleedAnimal {
+		font-size: 30px;
+	
+	}
 
+	#cardsContainer .card .dataCard .bleedAnimal {
+		margin-top: 3%;
+	}
 
-
+}

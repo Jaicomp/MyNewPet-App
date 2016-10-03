@@ -21,23 +21,20 @@
 	height: 70%;
 }
 
-@media screen and (min-width: 1000px) {
-	
-#cardsContainer .card .dataCard .typeAnimal {
-	text-align: center;
-	margin-top: 5%;
-	font-size: 20px;
-
-	}
-
-}
-@media screen and (min-width: 1600px) {
+@media screen and (max-width: 400px) {
 
 	#cardsContainer .card .dataCard .typeAnimal {
-		margin-top: 3%;
+		margin-top: 13%;
+		font-size: 30px;
+		text-align: center;
+	}
+	
+	#cardsContainer {
+		margin-top: 100px;
 	}
 
 }
+
 @media screen and (max-width: 1000px) {
 	#cardsContainer .card {
 		width: 48%;	
@@ -50,13 +47,31 @@
 	}
 
 	#cardsContainer .card .dataCard .typeAnimal {
-		margin-top: 5%;
-		font-size: 20px;
+		margin-top: 5.5%;
+		font-size: 30px;
 		text-align: center;
 	}
 }
 
+@media screen and (min-width: 1000px) {
+	
+	#cardsContainer .card .dataCard .typeAnimal {
+		text-align: center;
+		margin-top: 5%;
+		font-size: 30px;	
+	}
 
+	#cardsContainer .card .dataCard .typeAnimal:active {
+		color: red;
+		
 
+	}
+}
 
+@media screen and (min-width: 1600px) {
 
+	#cardsContainer .card .dataCard .typeAnimal {
+		margin-top: 3%;
+	}
+
+}

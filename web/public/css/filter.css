@@ -1,3 +1,4 @@
+
 .inputbox {
   height: 50px;
   width: 400px;
@@ -142,6 +143,32 @@
           transition-delay: 0.4s;
 }
 
+@media screen and (max-width: 400px) {
+	.inputbox {
+	  top: 30%;
+  	left: 50%;
+ 		width: 320px;	
+	}
+}
 
+
+@media screen and (min-width: 1000px) {
+
+	.inputbox {
+	  top: 16%;
+  	left: 50%;
+ 		width: 320px;	
+	}
+}
+
+
+@media screen and (min-width: 1200px) {
+
+	.inputbox {
+		top: 18%;
+		left: 50%;
+		width: 320px;
+	}
+}
 
 

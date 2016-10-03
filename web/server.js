@@ -29,7 +29,7 @@ app.get('/bleed', function(req, res){
 });
 
 app.get('/sendemail', function(req, res) {
-	if ((req.query.email.length> 5) && validator.isEmail(req.query.email)) {
+	if ((typeof req.query.email === 'string') && (req.query.email.length> 5) && validator.isEmail(req.query.email)) {
 
 		var codeSignUp = createCodeOf12Characters();
 
