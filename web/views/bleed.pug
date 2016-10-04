@@ -1,5 +1,14 @@
 include header.pug
 link(href='public/css/bleed.css', rel='stylesheet')
+link(href='public/css/filter.css', rel='stylesheet')
+script(src='public/js/index.js', defer)
+
+
+form.inputbox(onsubmit="return false;")
+	input(type='text', required, onchange='getText(this)')
+	#filter Filtro
+	button.del(type='reset')
+
 #cardsContainer
 	- for (var i in data) {
 	a.card

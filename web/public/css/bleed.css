@@ -1,8 +1,11 @@
 #cardsContainer {
-	margin: 0 auto;
-	width: 90%;
+
+	position: absolute;
+	width: 96%;
 	height: auto;
-	background-color: #737980;
+	top: 25%;
+	left: 3%;
+	margin: 0 auto;
 }
 
 #cardsContainer .card {
@@ -101,6 +104,10 @@
 
 @media screen and (max-width: 400px) {
 
+	#cardsContainer {
+		margin-top: 100px;
+	}
+
 	#cardsContainer .card:first-of-type {
 		margin-left: 1%;
 	}
@@ -114,7 +121,7 @@
 
 @media screen and (max-width: 1000px) {
 	#cardsContainer .card {
-		width: 48%;	
+		width: 47%;	
 		height: 300px;
 	}
 
