@@ -1,11 +1,11 @@
 include header.pug
 link(href='public/css/bleed.css', rel='stylesheet')
 link(href='public/css/filter.css', rel='stylesheet')
-script(src='public/js/index.js', defer)
+script(src='public/js/filter.js', defer)
 
 
 form.inputbox(onsubmit="return false;")
-	input(type='text', required, onchange='getText(this)')
+	input(type='text', required, onchange='filterCards(this)')
 	#filter Filtro
 	button.del(type='reset')
 
@@ -15,6 +15,6 @@ form.inputbox(onsubmit="return false;")
 		img(src='http://lorempixel.com/400/200/', width=100, height=100)
 		.dataCard
 			.bleedAnimal #{ data[i].name }
-			.animalSelection(href=''+data[i].name) Seleccionar
+			.animalSelection(href=''+data[i].name) Ver
 			.animalBook Reservar
 	- }

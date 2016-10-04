@@ -25,15 +25,17 @@ function sendEmailSignUp() {
 	var email = document.getElementById('emailRegisterInput');
 	var title = document.getElementById('emailRegisterTitle');
 	var registerButton = document.getElementById('registerButtonSignUp');
- 
+ 	var codeSignUp;
+
 	if (email.value.length > 0) {
+
 			var xmlhttp = new XMLHttpRequest();
 			xmlhttp.onreadystatechange = function() {
 				if (this.readyState == 4 && this.status == 200) {
 					if (this.responseText != 'FAIL') {
 						title.innerHTML = 'Introduce el ';
 						var wordCode = document.createTextNode('código ');
-						var lastWords = document.createTextNode('envia a tu correo electrónico: ');
+						var lastWords = document.createTextNode('enviado a tu correo electrónico: ');
 
 						var textLastWords = document.createElement('span');
 						textLastWords.style.color = 'black';
@@ -50,7 +52,8 @@ function sendEmailSignUp() {
 
 						email.value = '';
 						email.setAttribute('placeholder', 'Código');
-
+						console.log(this.responseText);
+						codeSignUp = this.responseText;						
 						registerButton.setAttribute('onclick', 'sendCodeSignUp()');
 					}
 				}
@@ -62,8 +65,22 @@ function sendEmailSignUp() {
 	}
 }
 
-function sendCodeSignUp() {
+function sendCodeSignUp(code) {
+	console.log("OKI");
+	/*
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
 
+		}
+	};
+	xmlhttp.open('GET', '', true);
+	xmlhttp.send();
+
+	if(true){} else {
+		window.alert('Código incorrecto, vuelvalo a intentar.');
+	}
+*/
 }
 
 
@@ -73,7 +90,3 @@ window.onclick = function(event) {
 		login.style.display = "none";
 	}
 }
-
-
-
-

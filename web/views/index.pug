@@ -1,10 +1,10 @@
 include header.pug
 link(href='public/css/index.css', rel='stylesheet')
 link(href='public/css/filter.css', rel='stylesheet')
-script(src='public/js/index.js', defer)
+script(src='public/js/filter.js', defer)
 
 form.inputbox(onsubmit="return false;")
-	input(type='text', required, onchange='getText(this)')
+	input(type='text', required, onchange='filterCards(this)')
 	#filter Filtro
 	button.del(type='reset')
 

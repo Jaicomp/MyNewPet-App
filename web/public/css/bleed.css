@@ -117,6 +117,10 @@
 		font-size: 30px;
 		text-align: center;
 	}
+
+	#cardsContainer .card:hover .dataCard .animalBook , #cardsContainer .card:hover .dataCard .animalSelection {
+		width: 70%;
+	}
 }
 
 @media screen and (max-width: 1000px) {

@@ -1,4 +1,4 @@
-function getText(textInput) {
+function filterCards(textInput) {
 
 	var cards = document.getElementsByClassName('card');
 	if (textInput.value.length == 0) {
