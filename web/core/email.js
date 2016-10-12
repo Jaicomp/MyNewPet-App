@@ -8,7 +8,7 @@ exports.sendEmailSignUp = function(emailTo, code) {
 	var content = new helper.Content('text/plain', 'Bienvenido a MyNewPet!!\nBienvenido a tu nueva cuenta. Registrarte es muy fácil, solo tienes que introducir el siguiente código: ' + code);
 	var mail = new helper.Mail(from_email, subject, to_email, content);
 		
-	var sg = require('sendgrid')('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');
+	var sg = require('sendgrid')('');
 
 	var request = sg.emptyRequest({
  		method: 'POST',
